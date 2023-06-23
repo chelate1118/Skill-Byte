@@ -8,7 +8,7 @@ function App() {
   const [name, setName] = useState("");
 
   async function greet() {
-    if (name !== "")
+    if (name.lenght == 0)
       setGreetMsg(await invoke("greet", { name }));
   }
 
