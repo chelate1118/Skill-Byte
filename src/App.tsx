@@ -12,10 +12,6 @@ function App() {
       setGreetMsg(await invoke("greet", { name }));
   }
 
-  async function add() {
-    await invoke("add_string", { key: name });
-  }
-
   return (
     <div className="container">
       <h1>Welcome to Tauri!</h1>
@@ -47,7 +43,6 @@ function App() {
           placeholder="Enter a name..."
         />
         <button type="submit">Greet</button>
-        <button onClick={add}>Add</button>
       </form>
 
       <div className="row">
